@@ -91,14 +91,14 @@
 @media (max-width: 480px) {
   .profile-info h2,
   .profile-info h1 {
-    font-size: 1rem; /* smaller username/profile name */
+    font-size: 0.8rem; /* smaller username/profile name */
   }
 
   .profile-bio p {
-    font-size: 0.85rem; /* smaller bio text */
+    font-size: 0.8rem; /* smaller bio text */
   }
 
   .profile-info {
-    padding-right: 10px; /* prevent text hitting screen edge */
+    padding-right: 8px; /* prevent text hitting screen edge */
   }
 }

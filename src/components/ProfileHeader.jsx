@@ -28,7 +28,7 @@ const ProfileHeader = ({ profile }) => {
           </span>
         </div>
         <div className="profile-bio">
-          <b className="text-lg">{profile.name}</b>
+          <b className="profile-name text-lg">{profile.name}</b>
           <p className="bio font-light text-sm">
             {profile.bio} <br />
             <a
