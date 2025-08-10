@@ -13,7 +13,7 @@
 .modal-content {
   background: #fff;
   display: flex;
-  flex-direction: row; /* default desktop layout */
+  flex-direction: row;
   max-width: 900px;
   width: 90%;
   height: 80%;
@@ -63,17 +63,17 @@
   margin-top: auto;
 }
 
-/* Mobile layout */
-@media (max-width: 768px) {
+/* Mobile layout for modal */
+@media (max-width: 600px) {
   .modal-content {
-    flex-direction: column; /* stack vertically */
+    flex-direction: column;
     height: auto;
     max-height: 90%;
   }
 
   .modal-left {
     flex: none;
-    height: 300px; /* fixed height for image area */
+    height: 300px;
   }
 
   .modal-right {
@@ -84,5 +84,21 @@
 
   .icons {
     margin-top: 15px;
+  }
+}
+
+/* Mobile font size adjustments for profile */
+@media (max-width: 480px) {
+  .profile-info h2,
+  .profile-info h1 {
+    font-size: 1rem; /* smaller username/profile name */
+  }
+
+  .profile-bio p {
+    font-size: 0.85rem; /* smaller bio text */
+  }
+
+  .profile-info {
+    padding-right: 10px; /* prevent text hitting screen edge */
   }
 }

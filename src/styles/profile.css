@@ -178,9 +178,9 @@ body {
 
 @media (max-width: 480px) {
 
-    .profile-avatar {
-    width: 100px;
-    height: 100px;
+  .profile-avatar {
+    width: 90px;
+    height: 90px;
   }
 
   .photo-grid {
