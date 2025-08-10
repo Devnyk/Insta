@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #262626;
+}
+
+.profile-page {
+  max-width: 935px;
+  margin: auto;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.follow-btn {
+  background: #0095f6;
+  color: white;
+  border: none;
+  padding: 5px 9px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.profile-bio p {
+  margin: 5px 0 0 0;
+}
+
+.highlights {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.highlight {
+  text-align: center;
+}
+
+.highlight img {
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+}
+
+.highlight span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 15px 0;
+  border-top: 1px solid #dbdbdb;
+}
+
+.profile-tabs button {
+  background: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.profile-tabs .active {
+  border-top: 1px solid black;
+}
+
+/* Grid container */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Each photo card with fixed size */
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 calc(33.333% - 16px);
+  border-radius: 6px;
+
+  /* Fixed height for uniform grid */
+  height: 350px;
+}
+
+/* Image styles */
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop image while keeping aspect ratio */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom effect on hover (desktop) */
+.photo-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay at the bottom */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 14px;
+
+  /* Gradient blend */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0)
+  );
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 14px;
+  align-items: center;
+
+  color: white;
+  font-size: 1.2rem;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover for desktop */
+.photo-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .photo-card {
+    flex: 1 1 calc(50% - 16px);
+    height: 250px; /* slightly smaller on tablets */
+  }
+
+  /* Always visible overlay on mobile */
+  .overlay {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+
+    .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr); /* Instagram-like phone view */
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,88 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  display: flex;
+  flex-direction: row; /* default desktop layout */
+  max-width: 900px;
+  width: 90%;
+  height: 80%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-left {
+  flex: 1.5;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-left img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.modal-right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.caption {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.stats {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column; /* stack vertically */
+    height: auto;
+    max-height: 90%;
+  }
+
+  .modal-left {
+    flex: none;
+    height: 300px; /* fixed height for image area */
+  }
+
+  .modal-right {
+    flex: none;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .icons {
+    margin-top: 15px;
+  }
+}
